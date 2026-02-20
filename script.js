@@ -1,5 +1,5 @@
 // Contador de dias juntos
-const dataInicio = new Date("2023-01-01"); // MUDE PRA DATA DE VOCÊS
+const dataInicio = new Date("2025-10-12"); // MUDE PRA DATA DE VOCÊS
 
 function atualizarContador() {
     const hoje = new Date();
