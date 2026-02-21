@@ -7,96 +7,89 @@
 
 /* BODY */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #ffe6ec, #fff0f5);
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
     color: #333;
 }
 
 /* NAVBAR */
 nav {
-    background-color: #ff4d6d;
-    padding: 15px 0;
+    background: rgba(255, 77, 109, 0.9);
+    padding: 15px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    backdrop-filter: blur(6px);
 }
 
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 20px;
-    font-weight: 600;
+    font-weight: bold;
     transition: 0.3s;
 }
 
 nav a:hover {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 /* CONTAINER */
 .container {
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 0 20px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
     text-align: center;
 }
 
-/* TITULOS */
+/* TITULO */
 h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    color: #ff4d6d;
+    font-size: 38px;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .frase {
     font-size: 18px;
-    margin-bottom: 40px;
-    color: #666;
+    margin-bottom: 50px;
+    color: white;
+    opacity: 0.9;
 }
 
-/* ===== INÍCIO (CARDS LADO A LADO) ===== */
+/* ===== CARDS LADO A LADO ===== */
 .cards-inicio {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* FORÇA 3 lado a lado */
     gap: 30px;
-    flex-wrap: wrap;
 }
 
+/* CARD */
 .card {
     background: white;
-    padding: 25px;
-    border-radius: 20px;
-    width: 250px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 35px 20px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(255,77,109,0.4);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.3);
 }
 
-/* ===== GALERIA ===== */
-.galeria-romantica {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+.card h3 {
+    color: #ff4d6d;
+    margin-bottom: 15px;
+    font-size: 20px;
 }
 
-.foto-card {
-    background: white;
-    padding: 10px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.card p {
+    font-size: 16px;
+    color: #555;
 }
 
-.foto-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(255,77,109,0.4);
-}
-
-.foto-card img {
-    width: 100%;
-    border-radius: 15px;
-    display: block;
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .cards-inicio {
+        grid-template-columns: 1fr;
+    }
 }
