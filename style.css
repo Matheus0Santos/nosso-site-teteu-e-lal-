@@ -1,40 +1,47 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
+/* =========================
+   BODY
+========================= */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(135deg, #ffe6ec, #fff0f5);
     color: #333;
     min-height: 100vh;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 nav {
     background-color: #ff4d6d;
     padding: 15px 0;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 20px;
-    font-weight: 600;
+    font-weight: bold;
     font-size: 16px;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s;
 }
 
 nav a:hover {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
-/* CONTAINER */
+/* =========================
+   CONTAINER
+========================= */
 .container {
     max-width: 1100px;
     margin: 50px auto;
@@ -42,36 +49,41 @@ nav a:hover {
     text-align: center;
 }
 
-/* TITULO */
+/* =========================
+   TITULOS
+========================= */
 h1 {
     font-size: 32px;
     margin-bottom: 15px;
     color: #ff4d6d;
 }
 
-/* FRASE */
 .frase {
     font-size: 18px;
     margin-bottom: 40px;
-    color: #666;
+    color: #555;
 }
 
-/* GALERIA */
+/* =========================
+   GALERIA GRID
+========================= */
 .galeria-romantica {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 25px;
 }
 
-/* CARD DA FOTO */
+/* =========================
+   FOTO CARD (TAMANHO FIXO)
+========================= */
 .foto-card {
     width: 100%;
-    aspect-ratio: 1 / 1; /* todas quadradas */
+    height: 300px; /* ALTURA FIXA */
     overflow: hidden;
     border-radius: 20px;
+    background: white;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: white;
 }
 
 .foto-card:hover {
@@ -79,16 +91,24 @@ h1 {
     box-shadow: 0 15px 35px rgba(255,77,109,0.4);
 }
 
-/* IMAGEM */
+/* =========================
+   IMAGEM
+========================= */
 .foto-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* CORTA SEM DEFORMAR */
     display: block;
 }
 
-/* RESPONSIVO */
+/* =========================
+   RESPONSIVO
+========================= */
 @media (max-width: 600px) {
+    .foto-card {
+        height: 220px;
+    }
+
     h1 {
         font-size: 24px;
     }
