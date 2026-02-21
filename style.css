@@ -1,19 +1,62 @@
-.foto-card {
-    background: white;
-    padding: 15px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.foto-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(255,77,109,0.5);
+/* BODY */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #ffe6ec, #fff0f5);
+    color: #333;
 }
 
+/* NAV */
+nav {
+    background-color: #ff4d6d;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* TITULO */
+h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #ff4d6d;
+}
+
+.frase {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+/* GALERIA */
+.galeria-romantica {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* FOTO */
 .foto-card img {
     width: 100%;
     border-radius: 15px;
-    margin-bottom: 10px;
-}
+    display: block;
 }
