@@ -7,26 +7,27 @@
 
 /* BODY */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffe6ec, #fff0f5);
     color: #333;
     min-height: 100vh;
 }
 
 /* NAVBAR */
 nav {
-    background: #ff4d6d;
-    padding: 15px;
+    background-color: #ff4d6d;
+    padding: 15px 0;
+    text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 nav a {
     color: white;
-    margin: 0 15px;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+    margin: 0 20px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
 }
 
 nav a:hover {
@@ -35,155 +36,64 @@ nav a:hover {
 
 /* CONTAINER */
 .container {
-    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
 }
 
-/* TÍTULO PRINCIPAL */
+/* TITULO */
 h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 15px;
     color: #ff4d6d;
 }
 
-/* SUBTÍTULO (Mala) */
-.subtitulo {
-    font-size: 22px;
-    margin-bottom: 30px;
-    letter-spacing: 3px;
-    color: #ffffff;
-    text-shadow: 0 3px 10px rgba(0,0,0,0.2);
-}
-
-/* FRASE ROMÂNTICA */
+/* FRASE */
 .frase {
     font-size: 18px;
     margin-bottom: 40px;
-    font-style: italic;
+    color: #666;
 }
 
-/* CARDS DAS DATAS */
-.datas {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-}
-
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 20px;
-    width: 260px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(255,77,109,0.4);
-}
-
-.card h3 {
-    color: #ff4d6d;
-    margin-bottom: 10px;
-}
-
-/* CONTADOR */
-#contador {
-    font-size: 22px;
-    margin-top: 20px;
-    color: #ff4d6d;
-    font-weight: bold;
-}
-
-/* BOTÕES */
-button {
-    background: #ff4d6d;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #e63e5c;
-}
-
-/* INPUTS (caso use em outras páginas) */
-input, textarea {
-    display: block;
-    margin: 12px auto;
-    padding: 10px;
-    width: 60%;
-    max-width: 400px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-}
-
-/* LISTAS */
-ul {
-    list-style: none;
-    margin-top: 20px;
-}
-
-ul li {
-    background: white;
-    margin: 10px auto;
-    padding: 15px;
-    width: 60%;
-    max-width: 500px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-/* ===== GALERIA ROMÂNTICA ===== */
-
+/* GALERIA */
 .galeria-romantica {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-    padding: 20px;
+    gap: 25px;
 }
 
-/* Moldura estilo polaroid */
-.galeria-romantica img {
+/* CARD DA FOTO */
+.foto-card {
     width: 100%;
+    aspect-ratio: 1 / 1; /* todas quadradas */
+    overflow: hidden;
     border-radius: 20px;
-    padding: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: white;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Efeito ao passar o mouse */
-.galeria-romantica img:hover {
-    transform: scale(1.05) rotate(-1deg);
-    box-shadow: 0 15px 35px rgba(255,77,109,0.5);
+.foto-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(255,77,109,0.4);
+}
+
+/* IMAGEM */
+.foto-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* RESPONSIVO */
-@media (max-width: 768px) {
-
-    .datas {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    input, textarea {
-        width: 85%;
-    }
-
-    ul li {
-        width: 85%;
-    }
-
+@media (max-width: 600px) {
     h1 {
-        font-size: 30px;
+        font-size: 24px;
+    }
+
+    .frase {
+        font-size: 16px;
     }
 }
