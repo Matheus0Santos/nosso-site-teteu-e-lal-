@@ -38,12 +38,23 @@ nav a:hover {
     padding: 40px 20px;
 }
 
-/* TÍTULO */
+/* TÍTULO PRINCIPAL */
 h1 {
-    font-size: 36px;
-    margin-bottom: 15px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #ff4d6d;
 }
 
+/* SUBTÍTULO (Mala) */
+.subtitulo {
+    font-size: 22px;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* FRASE ROMÂNTICA */
 .frase {
     font-size: 18px;
     margin-bottom: 40px;
@@ -70,7 +81,7 @@ h1 {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 12px 25px rgba(255,77,109,0.4);
 }
 
 .card h3 {
@@ -83,6 +94,7 @@ h1 {
     font-size: 22px;
     margin-top: 20px;
     color: #ff4d6d;
+    font-weight: bold;
 }
 
 /* BOTÕES */
@@ -100,7 +112,7 @@ button:hover {
     background: #e63e5c;
 }
 
-/* INPUTS */
+/* INPUTS (caso use em outras páginas) */
 input, textarea {
     display: block;
     margin: 12px auto;
@@ -129,21 +141,30 @@ ul li {
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* GALERIA */
-#galeria {
-    margin-top: 20px;
+/* ===== GALERIA ROMÂNTICA ===== */
+
+.galeria-romantica {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    padding: 20px;
 }
 
-#galeria img {
-    width: 200px;
-    margin: 10px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
+/* Moldura estilo polaroid */
+.galeria-romantica img {
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-#galeria img:hover {
-    transform: scale(1.05);
+/* Efeito ao passar o mouse */
+.galeria-romantica img:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 15px 35px rgba(255,77,109,0.5);
 }
 
 /* RESPONSIVO */
@@ -160,5 +181,9 @@ ul li {
 
     ul li {
         width: 85%;
+    }
+
+    h1 {
+        font-size: 30px;
     }
 }
